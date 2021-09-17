@@ -27,7 +27,7 @@ extension Log {
   
   public class func debug(line: Int = #line, _ object:Any?) {
     let value = object != nil ? object : ""
-    print("\(fullPrefix(line: line))  \(value ?? "nil")")
+    print("\(fullPrefix(line: line)) \(value ?? "nil")")
   }
   
   public class func line(line: Int = #line) {
@@ -55,7 +55,7 @@ private extension Log {
     let prefix = withPrefix ? prefix : ""
     let timePrefix = withTime ? lineTime() : ""
     let linePrefix = withLine ? lineNumber(line: line) : ""
-    return "\(prefix) \(timePrefix) \(linePrefix) - "
+    return "\(prefix) \(timePrefix) \(linePrefix) -"
   }
   
   class func lineTime() -> String {
